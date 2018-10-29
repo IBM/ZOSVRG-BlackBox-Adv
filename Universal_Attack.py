@@ -85,19 +85,10 @@ if __name__ == "__main__":
     parser.add_argument('-target_label', type=int, default=1, help="The target digit to attack")
     args = vars(parser.parse_args())
 
-    MGR.Add_Parameter('optimizer', args['optimizer'])
-    MGR.Add_Parameter('q', args['q'])
-    MGR.Add_Parameter('alpha', args['alpha'])
-    MGR.Add_Parameter('M', args['M'])
-    MGR.Add_Parameter('nStage', args['nStage'])
-    MGR.Add_Parameter('const', args['const'])
-    MGR.Add_Parameter('nFunc', args['nFunc'])
-    MGR.Add_Parameter('batch_size', args['batch_size'])
-    MGR.Add_Parameter('mu', args['mu'])
-    MGR.Add_Parameter('rv_dist', args['rv_dist'])
-    MGR.Add_Parameter('target_label', args['target_label'])
+    for par in args:
+        MGR.Add_Parameter(par, args[par])
 
     MGR.Add_Parameter('save_path', 'Results/' + MGR.parSet['optimizer'] + '/')
-
     MGR.parSet['batch_size'] = min(MGR.parSet['batch_size'], MGR.parSet['nFunc'])
+
     main()

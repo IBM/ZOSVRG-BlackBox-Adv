@@ -34,14 +34,5 @@ class SYS_MANAGER:
 
 
     def Log_MetaData(self):
-        self.logHandler.write('Optimizer: ' + self.parSet['optimizer'] + '\n')
-        self.logHandler.write('q: ' +  str(self.parSet['q']) + '\n')
-        self.logHandler.write('eta: ' + str(self.parSet['eta']) + '\n')
-        self.logHandler.write('M: ' +  str(self.parSet['M']) + '\n')
-        self.logHandler.write('nStage: ' +  str(self.parSet['nStage']) + '\n')
-        self.logHandler.write('const: ' + str(self.parSet['const']) + '\n')
-        self.logHandler.write('number of functions: ' + str(self.parSet['nFunc']) + '\n')
-        self.logHandler.write('batch size: ' + str(self.parSet['batch_size']) + '\n')
-        self.logHandler.write('mu: ' + str(self.parSet['mu']) + '\n')
-        self.logHandler.write('rv_dist: ' + str(self.parSet['rv_dist']) + '\n')
-        self.logHandler.write('target_label: ' + str(self.parSet['target_label']) + '\n')
+        for par, par_value in self.parSet.items():
+            self.logHandler.write(par + ' ' + str(par_value) + '\n')
