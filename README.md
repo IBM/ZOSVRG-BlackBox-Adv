@@ -34,4 +34,4 @@ python3 Universal_Attack.py -optimizer ZOSVRG -q 10 -alpha 1.0 -M 10 -nStage 250
 -target_label: help="The target digit to attack")
 -->
 
-# Updates Upcmoing Soon
+# Updates Upcoming Soon...
