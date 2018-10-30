@@ -13,7 +13,7 @@ Below is a list of parameters that the present code takes:
 2. **q**: The number of random vector to average over when estimating the gradient.
 3. **alpha**: The optimizer's step size for updating solutions is alpha/(dimension of **x**)
 4. **M**: (For ZOSVRG) The number of batches to apply during each stage.
-5. **nStage**: (For ZOSVRG) The number of stages. Note that for ZOSGD, the number of iterations is equal to M /times nStage.
+5. **nStage**: (For ZOSVRG) The number of stages. Note that for ZOSGD, the number of iterations is equal to M </times> nStage.
 
 ## Example 1
 python3 Universal_Attack.py -optimizer ZOSVRG -q 10 -alpha 1.0 -M 10 -nStage 25000 -const 1 -nFunc 10 -batch_size 5 -mu 0.01 -target_label 4 -rv_dist UnitSphere
