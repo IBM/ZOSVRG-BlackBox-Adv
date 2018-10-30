@@ -9,7 +9,8 @@ For the ZOSVRG algorithm, see our NIPS 2018 paper “[Zeroth-Order Stochastic Va
 This Python code generates universal adversarial attacks on neural networks for the MNIST classification task under the black-box setting. For an image **x**, the universal attack **d** is first applied to **x** in the *arctanh* space. The final adversarial image is then obtained by applying the *tanh* transform. Summarizing, **x**<sub>adv</sub> = *tanh*(*arctanh*(2**x**) + **d**)/2
 
 Below is a list of parameters that the present code takes:
--optimizer: This parameter specifies the optimizer to use during attack generation. Currently the code supports ZOSGD and ZOSVRG.
+1. optimizer: This parameter specifies the optimizer to use during attack generation. Currently the code supports ZOSGD and ZOSVRG.
+2. q: 
 
 ## Example 1
 python3 Universal_Attack.py -optimizer ZOSVRG -q 10 -alpha 1.0 -M 10 -nStage 25000 -const 1 -nFunc 10 -batch_size 5 -mu 0.01 -target_label 4 -rv_dist UnitSphere
