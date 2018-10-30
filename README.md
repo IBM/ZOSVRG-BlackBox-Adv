@@ -16,7 +16,9 @@ Below is a list of parameters that the present code takes:
 5. **nStage**: (For ZOSVRG) The number of stages. Note that for ZOSGD, the number of iterations is equal to M x nStage.
 
 ## Example 1
+'''shell
 python3 Universal_Attack.py -optimizer ZOSVRG -q 10 -alpha 1.0 -M 10 -nStage 25000 -const 1 -nFunc 10 -batch_size 5 -mu 0.01 -target_label 4 -rv_dist UnitSphere
+'''
 
 <img src="/Sample-Output/ZOSVRG-Sample-1/0004.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0006.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0019.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0024.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0027.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0033.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0042.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0048.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0049.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0056.png" width="80" height="80">
 
