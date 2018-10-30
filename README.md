@@ -1,11 +1,11 @@
-#ZOSVRG for Generating Universal Attacks on Black-box Neural Networks
+# ZOSVRG for Generating Universal Attacks on Black-box Neural Networks
 
 ZOSVRG is the proposed new zeroth-order nonconvex optimization method. This repo presents ZOSVRG's application for generating adversarial attacks on black-box neural networks. It contains a pretrained network model for the MNIST classification task, and a Python implementation for attack generation that can directly be applied to the network model.
 
 For the ZOSVRG algorithm, see our NIPS 2018 paper “[Zeroth-Order Stochastic Variance Reduction for Nonconvex Optimization](https://arxiv.org/abs/1805.10367)” (Hereinafter referred to as Paper.)
 
 
-##Description
+## Description
 This Python code generates universal adversarial attacks on neural networks for the MNIST classification task under the black-box setting. For an image **x**, the universal attack is first applied to
 
 ## Example 1
@@ -29,4 +29,4 @@ python3 Universal_Attack.py -optimizer ZOSVRG -q 10 -alpha 1.0 -M 10 -nStage 250
 -target_label: help="The target digit to attack")
 -->
 
-#Updates Upcmoing Soon
+# Updates Upcmoing Soon
