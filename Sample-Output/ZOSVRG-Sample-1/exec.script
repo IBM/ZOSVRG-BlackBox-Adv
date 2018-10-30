@@ -1,0 +1,1 @@
+python3 Universal_Attack.py -q 10 -alpha 1.0  -M 10 -nStage 25000 -const 1 -nFunc 10 -batch_size 5 -mu 0.01 -target_label 4 -rv_dist UnitSphere
