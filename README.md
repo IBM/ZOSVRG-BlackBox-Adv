@@ -8,18 +8,15 @@ For the ZOSVRG algorithm, see our NIPS 2018 paper “[Zeroth-Order Stochastic Va
 ## Description
 This Python code generates universal adversarial attacks on neural networks for the MNIST classification task under the black-box setting. For an image **x**, the universal attack **d** is first applied to **x** in the *arctanh* space. The final adversarial image is then obtained by applying the *tanh* transform. Summarizing:  
 
-<center>
-**x**<sub>adv</sub> = *tanh*(*arctanh*(2**x**) + **d**)/2
-</center>
+<center>**x**<sub>adv</sub> = *tanh*(*arctanh*(2**x**) + **d**)/2</center>
 
 ## Example 1
 python3 Universal_Attack.py -optimizer ZOSVRG -q 10 -alpha 1.0 -M 10 -nStage 25000 -const 1 -nFunc 10 -batch_size 5 -mu 0.01 -target_label 4 -rv_dist UnitSphere
 
-<center>
 <img src="/Sample-Output/ZOSVRG-Sample-1/0004.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0006.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0019.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0024.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0027.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0033.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0042.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0048.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0049.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/0056.png" width="80" height="80">
 
 <img src="/Sample-Output/ZOSVRG-Sample-1/Adv_id4_Orig4_Adv9.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/Adv_id6_Orig4_Adv8.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/Adv_id19_Orig4_Adv2.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/Adv_id24_Orig4_Adv9.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/Adv_id27_Orig4_Adv9.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/Adv_id33_Orig4_Adv2.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/Adv_id42_Orig4_Adv9.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/Adv_id48_Orig4_Adv9.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/Adv_id49_Orig4_Adv9.png" width="80" height="80"><img src="/Sample-Output/ZOSVRG-Sample-1/Adv_id56_Orig4_Adv9.png" width="80" height="80">
-</center>
+
 
 <!---
 -optimizer: default='ZOSVRG', help="choose from ZOSVRG and ZOSGD")
